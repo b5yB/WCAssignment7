@@ -53,11 +53,18 @@ public class CustomArrayList<T> implements CustomList<T> {
 				done = true;
 			}
 			else {
+				if (items[items.length-1] != null) {
+					items = Arrays.copyOf(items, items.length*2);
+				}
+				
 				Object [] temp = Arrays.copyOf(items, items.length);
+				
 				for (int i=0; i<index; i++) {
 						temp[i] = items[i];
 				}
+				
 				temp[index] = item;
+				
 				for (int j=index+1; j<temp.length; j++) {
 					temp[j] = items[j-1];
 				}

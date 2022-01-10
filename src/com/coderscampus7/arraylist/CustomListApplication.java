@@ -14,8 +14,16 @@ public class CustomListApplication {
 			System.out.println(cal.get(i));
 		}
 		*/
-		cal.add(10);
-		System.out.println(cal.get(10));
+		
+		for(int i=0;i<10;i++) {
+			cal.add(i);
+		}
+		
+		cal.add(5, 1);
+		
+		for (int i=0; i<cal.getSize(); i++) {
+			System.out.println(cal.get(i));
+		}
 		
 	}
 
